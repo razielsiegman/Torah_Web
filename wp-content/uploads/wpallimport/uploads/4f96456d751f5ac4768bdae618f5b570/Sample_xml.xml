@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<node>
+		<title><![CDATA[Active Prayer]]></title>
+		<author><![CDATA[Rabbi Yaakov Haber]]></author>
+		<year><![CDATA[1999]]></year>
+		<tag><![CDATA[Moadim: succot]]></tag>
+		<text><![CDATA[This is sample text for Rabbi Haber's dvar torah]]></text>
+	</node>
+	<node>
+		<title><![CDATA[Simchas Torah: In Anticipation]]></title>
+		<author><![CDATA[Rabbi Yaakov Neuburger]]></author>
+		<year><![CDATA[1999]]></year>
+		<tag><![CDATA[Moadim: sim]]></tag>
+		<text><![CDATA[This is sample text for Rabbi Neuberger's dvar torah]]></text>
+	</node>
+</data>
