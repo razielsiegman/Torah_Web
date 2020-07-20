@@ -32,12 +32,16 @@ get_header(); ?>
 
 <?php if (have_posts()) : ?>
 
+	<?php $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author)); ?>
+	<div class="puremag-list-post-read-more" center>
+		<a href="../../category/divrei-torah/?author_name=<?php echo($author_name)?>" >Divrei Torah</a>
+		<a href="../../category/audio/?author_name=<?php echo($author_name)?>">Audio/Video</a>
+		<a href="../../tag/coronavirus/?author_name=<?php echo($author_name)?>">Coronavirus</a>
+	</div>
+	<br>
+	
+
     <div class="puremag-posts-container">
-    <?php $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author)); ?>
-    <?php if ( function_exists('wpp_get_mostpopular') ) {
-	    $args = array('author' => 'author_name');
-		wpp_get_mostpopular($args );
-	} ?>
     <?php while (have_posts()) : the_post(); ?>
 
         <?php get_template_part( 'template-parts/content', puremag_post_style() ); ?>

@@ -164,6 +164,46 @@ function my_theme_archive_title( $title ) {
 }
 add_filter( 'get_the_archive_title', 'my_theme_archive_title' ); // End of user add
 
+/*//here
+add_action( 'save_post', 'wpse_set_featured_image' );
+function wpse_set_featured_image($post_id) {
+    // get author id
+    //$author_id = get_the_author_id($post_id);
+    $author_id = get_the_author_id($post_id)
+    // get author's image
+    $author_image_id = get_user_meta($author_id, 'your_acf_img_var_name', true);
+    // fallback image
+    if(empty($author_image_id)) {
+        // set to an existing image ID to use as a fallback
+        $author_image_id = '4';
+    }
+    // at last, set the post featured image
+    set_post_thumbnail($post_id, $author_image_id);
+}
+//to here*/
+
+function get_gravatar( $email, $s = 80, $d = 'mp', $r = 'g', $img = false, $atts = array() ) {
+    $url = 'https://www.gravatar.com/avatar/';
+    $url .= md5( strtolower( trim( $email ) ) );
+    $url .= "?s=$s&d=$d&r=$r";
+    if ( $img ) {
+        $url = '<img src="' . $url . '"';
+        foreach ( $atts as $key => $val )
+            $url .= ' ' . $key . '="' . $val . '"';
+        $url .= ' />';
+    }
+    return $url;
+}
+
+function custom_tag_cloud_widget($args) {
+    $args['smallest'] = 8; //smallest tag
+    $args['largest'] = 22; //largest tag
+    $args['number'] = 15; //adding a 0 will display all tags
+    $args['unit'] = 'pt'; //tag font unit
+    return $args;
+}
+
+add_filter( 'widget_tag_cloud_args', 'custom_tag_cloud_widget' );
 
 add_action( 'template_redirect', 'puremag_content_width', 0 );
 

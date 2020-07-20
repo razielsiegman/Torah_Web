@@ -20,7 +20,8 @@ get_header(); ?>
 <div class="puremag-main-wrapper clearfix" id="puremag-main-wrapper" role="main">
 <div class="theiaStickySidebar">
 
-<?php if(is_home() && !is_paged()) { ?>
+<?php if(is_home() && !is_paged()) {
+echo do_shortcode( '[searchandfilter fields="category,post_tag" headings="Navigation Bar" types="" all_items_labels="All Categories,All Topics" class="crazy"]' ); ?>
 <div class="puremag-featured-posts-area clearfix">
 <?php dynamic_sidebar( 'puremag-home-top-widgets' ); ?>
 </div>

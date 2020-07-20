@@ -23,7 +23,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/MyGit/JacobsJordan/My_Projects/minyanTracking" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
   </component>
   <component name="SvnConfiguration">
@@ -40,6 +40,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="421" y="97" key="FileChooserDialogImpl" timestamp="1593619238117">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="97" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1593619238117" />
     <state x="337" y="166" key="com.intellij.ide.util.TipDialog" timestamp="1593467487730">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
